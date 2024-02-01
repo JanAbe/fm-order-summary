@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "red-hat";
+  src: url("./fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf");
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  margin: 0;
+  background-image: url("./images/pattern-background-mobile.svg") ;
+  object-fit: contain;
+  background-color: var(--pale-blue);
+  background-repeat: repeat-x;
+  font-family: "red-hat", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: white;
+  margin: 5rem 1.5rem;
+  max-width: 25rem;
+  box-shadow: 0 30px 20px rgb(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card > img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.content-wrapper {
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.description {
+  text-align: center;
+  color: var(--desaturated-blue);
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: .05rem;
+}
+
+.pricing-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+  padding: .5rem 1rem;
+  gap: 2rem;
+}
+
+.annual-plan > h2 {
+  font-size: .8rem;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.annual-plan > p {
+  font-size: .8rem;
+  margin-top: 0;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+
+.annual-plan-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.button-wrapper > button {
+  color: var(--bright-blue);
+  border: none;
+  background-color: var(--very-pale-blue);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.button-wrapper > button:hover {
+  text-decoration: none;
+  color: #766CF1;
+}
+
+.payment-button-wrapper {
+  margin: 2rem 0;
+}
+
+.payment-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 13px;
+  border: none;
+  background-color: var(--bright-blue);
+  color: white;
+  font-weight: 900;
+  font-size: 1.1rem;
+  box-shadow: 0 18px 20px hsl(245, 75%, 88%);
+}
+
+.payment-button:hover {
+  background-color: #766CF1;
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+.cancel-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cancel-button {
+  border: none;
+  background-color: white;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--desaturated-blue);
+}
+
+.cancel-button:hover {
+  color: #1D1E3A;
+}
+
+@media (min-width: 450px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg") ;
+  }
+
+  .annual-plan > h2 {
+    font-size: 1rem;
+  }
+
+  .annual-plan > p {
+    font-size: 1rem;
+  }
+}
